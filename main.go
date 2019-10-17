@@ -16,7 +16,7 @@ var logger *log.Logger
 
 func main() {
 	//设置系统title
-	Bootstrap.Config.SystemTitle = "title"
+	Bootstrap.Config.SystemTitle = "MJGO"
 	curPath, _ := filepath.Abs(os.Args[0])
 	rootPath := filepath.Dir(curPath)
 	//配置日志
