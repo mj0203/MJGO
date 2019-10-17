@@ -1,0 +1,100 @@
+<style type="text/css">
+    .field, .value {
+        display: inline-block;
+        height: 2rem;
+        line-height: 2rem;
+        border-bottom: 1px solid gray;
+    }
+    .field {
+        width: 4rem;
+    }
+    .value {
+        width: 10rem;
+    }
+    table {
+        width: 100%;
+        border-collapse:collapse;
+    }
+    tbody tr {
+        height: 2rem;
+    }
+    tbody tr td {
+        text-align: center;
+    }
+</style>
+<div id="viewContent">
+    <!-- 创建用户 -->
+    <div card w50>
+        <form label_width="4" id="createUserForm">
+            <p>
+                <MyFormItem label="用户名">
+                    <input type="text" name="name" />
+                </MyFormItem>
+            </p>
+            <p>
+                <MyFormItem label="手机号">
+                    <input type="text" name="phone" />
+                </MyFormItem>
+            </p>
+            <p style="text-align: center">
+                <input type="button" success w50 onclick="createUser()" value="创建" />
+            </p>
+        </form>
+    </div>
+    <!-- 查询用户 -->
+    <div col cb nb upgap10>
+        <input type="text" value="" name="queryPhone" placeholder="请输入手机号" style="width: 180px;" />
+        <button info class="queryBtn" onclick="getUserList()">查询</button>
+    </div>
+    <!-- 显示用户列表 -->
+    <div card w50>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 30%;">用户名</th>
+                    <th style="width: 30%;">手机号</th>
+                    <th style="width: 40%;">创建时间</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        Fd.httpSuccessCode = 200;
+
+        getUserList()
+    })
+    function getUserList() {
+        $("table tbody").empty()
+        var phone = $.trim($('input[name="queryPhone"]').val())
+        var result = Fd.url("/user/gets").data({"phone": phone}).post()
+        if(Fd.success(result) && result.data.length){
+            var userList = result.data
+            var htm = "";
+            for (let k in userList){
+                htm += "<tr>"
+                htm += "<td>"+userList[k].name+"</td>";
+                htm += "<td>"+userList[k].phone+"</td>";
+                htm += "<td>"+userList[k].created_at+"</td>";
+                htm += "</tr>";
+            }
+            $("table tbody").append(htm)
+        }
+    }
+    function createUser(){
+        var formNode = $('#createUserForm');
+        var name = $.trim(formNode.find("input[name='name']").val()),
+            phone = $.trim(formNode.find("input[name='phone']").val());
+        if(!name || !phone){
+            Flayer.tips("请完善信息");
+            return false;
+        }
+        var result = Fd.url("/user/create").data({name: name, phone: phone}).post()
+        console.log(result)
+
+        getUserList()
+    }
+</script>

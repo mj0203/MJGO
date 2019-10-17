@@ -1,0 +1,42 @@
+<style>
+    p {
+        margin: 1rem 0rem;
+    }
+</style>
+<div card>
+    欢迎进入mgo系统
+    <form>
+        <p>
+            <input type="text" value="" placeholder="请输入内容" />
+        </p>
+        <p>
+            <MySelect name="player" label="请选择爱好">
+                <MyOption value="1">篮球</MyOption>
+                <MyOption value="2">足球</MyOption>
+                <MyOption value="3">排球</MyOption>
+            </MySelect>
+        </p>
+        <p>
+            <textarea rows="3" cols="80"></textarea>
+        </p>
+        <p>
+            <input type="text" name="phone" value="" placeholder="请输入手机号" w10 />
+            <input type="button" value="查询" success style="margin-left: .5rem;" name="searchBtn" />
+        </p>
+        <p><a href="/user/index.html">进入用户中心</a> </p>
+        <a href="http://tools.fire80.com">fire80</a>
+    </form>
+</div>
+<script>
+    $(function () {
+        $('input[name="searchBtn"]').click(function(){
+            var phone = $.trim($('input[name="phone"]').val())
+            if(!phone){
+                Flayer.tips("请输入手机号")
+                return
+            }
+            var userInfo = Fd.url("/user/info").data({phone: phone}).post()
+            console.log(userInfo)
+        })
+    })
+</script>

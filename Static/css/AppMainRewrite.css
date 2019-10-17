@@ -1,0 +1,500 @@
+html {
+	font-size: 16px;
+}
+body {
+	font-size: .8rem;
+	font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	word-break: break-all;
+	word-wrap: break-word;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+	color: #DDD;
+}
+/* 美化input select textarea button 边框 */
+input[type="text"], input[type="button"], input[type="submit"], select, textarea, button {
+	border: 1px solid #DDD;
+	border-radius: .3rem;
+	padding: .5rem .5rem;
+	outline: none;
+	-webkit-appearance: none;
+}
+input[type="text"], select {
+	width: 100%;
+}
+input[type="button"][info], input[type="submit"][info], button[info] {
+	background-color: #2db7f5;
+	border-color: #2db7f5;
+	color: #fff;
+}
+input[type="button"][success], input[type="submit"][success], button[success] {
+	background-color: #47cb89;
+	border-color: #47cb89;
+	color: #fff;
+}
+input[type="button"][warning], input[type="submit"][warning], button[warning] {
+	background-color: #ffad33;
+	border-color: #ffad33;
+	color: #fff;
+}
+input[type="button"][error], input[type="submit"][error], button[error] {
+	background-color: #f16543;
+	border-color: #f16543;
+	color: #fff;
+}
+input[type="button"], input[type="submit"], button, MySelect {
+	cursor: pointer;
+}
+/* 美化按钮阴影效果 */
+input[type="button"]:hover, input[type="submit"]:hover, button:hover {
+	box-shadow: 1px 1px .5rem #DDD;
+}
+/* 美化 input[type=file] */
+MyFile {
+	display: inline-block;
+	cursor: pointer;
+	padding: .5rem 1rem;
+	background-color: gray;
+	border-radius: .3rem;
+	position: relative;
+	text-shadow: 2px 2px 2px #D3D3D3;
+	color: #FFF;
+	font-weight: bold;
+}
+input[type="file"] {
+	position: absolute;
+	opacity: 0;
+	left: 0rem;
+	top: 0rem;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+/* 强化宽度比例设置 */
+body *[w5] {width: 5%;}
+body *[w10] {width: 10%;}
+body *[w15] {width: 15%;}
+body *[w20] {width: 20%;}
+body *[w25] {width: 25%;}
+body *[w30] {width: 30%;}
+body *[w35] {width: 35%;}
+body *[w40] {width: 40%;}
+body *[w45] {width: 45%;}
+body *[w50] {width: 50%;}
+body *[w60] {width: 60%;}
+body *[w65] {width: 65%;}
+body *[w70] {width: 70%;}
+body *[w75] {width: 75%;}
+body *[w80] {width: 80%;}
+body *[w85] {width: 85%;}
+body *[w90] {width: 90%;}
+body *[w95] {width: 95%;}
+body *[w100] {width: 100%;}
+body *[h5] {height: 5rem;}
+body *[h10] {height: 10rem;}
+body *[h15] {height: 15rem;}
+body *[h20] {height: 20rem;}
+body *[h25] {height: 25rem;}
+body *[h30] {height: 30rem;}
+body *[h35] {height: 35rem;}
+body *[h40] {height: 40rem;}
+body *[h45] {height: 45rem;}
+body *[h50] {height: 50rem;}
+body *[h60] {height: 60rem;}
+body *[h65] {height: 65rem;}
+body *[h70] {height: 70rem;}
+body *[h80] {height: 80rem;}
+body *[h85] {height: 85rem;}
+body *[h90] {height: 90rem;}
+body *[h95] {height: 95rem;}
+body *[h100] {height: 100rem;}
+body *[hsmall] {padding-top: .3rem;padding-bottom: .3rem;}
+body *[hdefault] {padding-top: .5rem;padding-bottom: .5rem;}
+body *[hbig] {padding-top: .8rem;padding-bottom: .8rem;}
+
+/* 边距间隔 */
+*[lrgap1] {margin: 0rem .1rem;}
+*[lrgap2] {margin: 0rem .2rem;}
+*[lrgap3] {margin: 0rem .3rem;}
+*[lrgap4] {margin: 0rem .4rem;}
+*[lrgap5] {margin: 0rem .5rem;}
+*[lrgap6] {margin: 0rem .6rem;}
+*[lrgap7] {margin: 0rem .7rem;}
+*[lrgap8] {margin: 0rem .8rem;}
+*[lrgap9] {margin: 0rem .9rem;}
+*[lrgap10] {margin: 0rem 1rem;}
+*[lrgap11] {margin: 0rem 1.5rem;}
+*[lrgap12] {margin: 0rem 2rem;}
+*[lrgap13] {margin: 0rem 2.5rem;}
+*[lrgap14] {margin: 0rem 3rem;}
+*[lrgap15] {margin: 0rem 3.5rem;}
+*[lrgap16] {margin: 0rem 4rem;}
+*[lrgap17] {margin: 0rem 4.5rem;}
+*[lrgap18] {margin: 0rem 5rem;}
+*[lrgap19] {margin: 0rem 5.5rem;}
+*[lrgap20] {margin: 0rem 6rem;}
+*[upgap1] {margin: .1rem 0rem;}
+*[upgap2] {margin: .2rem 0rem;}
+*[upgap3] {margin: .3rem 0rem;}
+*[upgap4] {margin: .4rem 0rem;}
+*[upgap5] {margin: .5rem 0rem;}
+*[upgap6] {margin: .6rem 0rem;}
+*[upgap7] {margin: .7rem 0rem;}
+*[upgap8] {margin: .8rem 0rem;}
+*[upgap9] {margin: .9rem 0rem;}
+*[upgap10] {margin: 1rem 0rem;}
+*[upgap11] {margin: 1.5rem 0rem;}
+*[upgap12] {margin: 2rem 0rem;}
+*[upgap13] {margin: 2.5rem 0rem;}
+*[upgap14] {margin: 3rem 0rem;}
+*[upgap15] {margin: 3.5rem 0rem;}
+*[upgap16] {margin: 4rem 0rem;}
+*[upgap17] {margin: 4.5rem 0rem;}
+*[upgap18] {margin: 5rem 0rem;}
+*[upgap19] {margin: 5.5rem 0rem;}
+*[upgap20] {margin: 6rem 0rem;}
+
+
+input[type="text"]:focus, input[type="text"]:hover, textarea:focus, textarea:hover, MySelect:focus, MySelect:hover {
+    border-color: #57a3f3;
+}
+
+MySelect {
+	opacity: 0;
+	display: block;
+	position: relative;
+	border: 1px solid #DDD;
+	border-radius: .3rem;
+	padding: .5rem 0rem;
+}
+MySelect[origin] MyOptions {
+	display: none;
+}
+MySelect[origin] select {
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	display: inline;
+}
+
+MySelect MySelf {
+	padding-left: .5rem;
+	display: block;
+}
+MySelect MySelf.default {
+	color: #DDD;
+}
+MySelect MyArrow.down {
+	width: 0;
+    height: 0;
+    border-top: .3rem solid #80848f;
+    border-left: .3rem solid transparent;
+    border-right: .3rem solid transparent;
+    border-bottom: .3rem solid transparent;
+    display: inline-block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+MySelect MyArrow.up {
+	width: 0;
+    height: 0;
+    border-top: .3rem solid transparent;
+    border-left: .3rem solid transparent;
+    border-right: .3rem solid transparent;
+    border-bottom: .3rem solid #80848f;
+    display: inline-block;
+    position: absolute;
+    right: 1rem;
+    top: .75rem;
+}
+MySelect MyOptions {
+	display: none;
+	position: absolute;
+	width: 100%;
+	max-height: 15rem;
+	overflow: auto;
+	top: 2.3rem;
+	border: 1px solid #DDD;
+	border-radius: .3rem;
+	padding: .3rem 0rem;
+	background-color: white;
+	z-index: 100;
+}
+MySelect select {
+	display: none;
+}
+MySelect MyOption.default {
+	display: none;
+}
+MySelect MyOption:hover {
+	background: #DDD;
+}
+MySelect MyOption[selected] {
+	background: rgba(45,140,240,.9);
+}
+MySelect MyOption {
+	display: block;
+	padding: .5rem .5rem;
+	cursor: pointer;
+}
+
+/* 美化input=radio */
+MyRadio {
+	cursor: pointer;
+	position: relative;
+}
+MyRadio .btn {
+	content: "";
+	width: 1rem;
+	height: 1rem;
+	border: 1px solid gray;
+	display: inline-block;
+	margin: 0rem .5rem;
+	vertical-align: middle;
+	border-radius: 1rem;
+}
+MyRadio[checked] .btn::before { 
+	content: "";
+	width: .5rem;
+	height: .5rem;
+	border: 1px solid gray;
+	border-radius: .5rem;
+	display: inline-block;
+	background: gray;
+	margin-top: .13rem;
+	margin-left: .13rem;
+}
+MyRadio .btn:hover {
+	border-color: #57a3f3;
+}
+MyRadio .txt {
+	vertical-align: middle;
+}
+/* 美化input=checkbox */
+MyCheckbox {
+	cursor: pointer;
+	position: relative;
+}
+MyCheckbox .btn {
+	content: "";
+	width: 1rem;
+	height: 1rem;
+	border: 1px solid gray;
+	border-radius: .2rem;
+	display: inline-block;
+	margin: 0rem .5rem;
+	vertical-align: middle;
+}
+MyCheckbox[checked] .btn::before { 
+	content: "";
+	width: 0.05rem;
+	height: .35rem;
+	border: 1px solid gray;
+	border-radius: .3rem;
+	display: inline-block;
+	background: gray;
+	transform: rotate(-54deg);
+	margin-left: .15rem;
+	margin-top: .35rem;
+}
+MyCheckbox[checked] .btn::after { 
+	content: "";
+	width: 0.05rem;
+	height: .6rem;
+	border: 1px solid gray;
+	border-radius: .3rem;
+	display: inline-block;
+	background: gray;
+	transform: rotate(40deg);
+	margin-left: .14rem;
+}
+MyCheckbox .btn:hover {
+	border-color: #57a3f3;
+}
+MyCheckbox .txt {
+	vertical-align: middle;
+}
+div[slide] {
+	display: none;
+	border: 1px solid #DDD;
+	border-radius: .3rem;
+	padding: .5rem .5rem;
+	overflow: hidden;
+	position: relative;
+}
+div[slide]:hover {
+	box-shadow: 1px 1px .5rem #DDD;
+}
+div[slide] .downArrow {
+	cursor: pointer;
+	position: absolute;;
+	left: 50%;
+	bottom: -.5rem;
+	width: 0;
+    height: 0;
+    border-top: .5rem solid #80848f;
+    border-left: .5rem solid transparent;
+    border-right: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+}
+div[slide] .upArrow {
+	position: absolute;;
+	left: 50%;
+	bottom: 0rem;
+	width: 0;
+    height: 0;
+    border-top: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-right: .5rem solid transparent;
+    border-bottom: .5rem solid #80848f;
+}
+*[card], *[col] {
+	padding: .5rem .5rem;
+	border: 1px solid #DDD;
+	border-radius: .3rem;
+}
+*[col] {
+	float: left;
+}
+*[card][nb], div[col][nb] {
+	border: 0px;
+}
+span[cb] {
+	display: block;
+	clear: both;
+}
+MyFormItem {
+	margin: 1rem 0rem;
+	display: block;
+	opacity: 0;
+}
+MyFormItem[required] label[litem]:before {
+	content: " * ";
+	color: red;
+	vertical-align: middle;
+	font-weight: bold;
+}
+MyFormItem label[litem] {
+	float: left;
+	text-align: right;
+	padding-right: .3rem;
+}
+MyFormItem div[ritem] {
+	text-align: left;
+}
+MyFormItem div[ritem]:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+/* 预制layer节点 */
+.prelayer {
+	display: none;
+}
+MySlide {
+	border-radius: .3rem;
+	display: block;
+	cursor: pointer;
+	width: 100%;
+	height: .5rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: #fff;
+	opacity: 0.9;
+	box-shadow: 1px .5rem .5rem #DDD;
+}
+MyLocation {
+	cursor: pointer;
+}
+MyLocation[type="text"] {
+	color: blue;
+	cursor: pointer;
+    text-decoration: underline;
+}
+MyLocationBack {
+	display: block;
+	cursor: pointer;
+	width: 2rem;
+	height: 2rem;
+	position: fixed;
+	top: 30%;
+	border-radius: .5rem;
+	background-color: green;
+	box-shadow: 0px 0px 1px 1px #DDD;
+	color: #FFF;
+}
+MyLocationBack:after {
+	display: block;
+	content: "";
+	border: .5rem solid transparent;
+	border-right: .5rem solid #FFF;
+	margin: .5rem .75rem 0rem 0rem;
+}
+
+Flayer, Fmask, Fbox, Fheader, Fcontent, Ffooter {
+	display: block;
+}
+Flayer Fheader a {
+	font-weight: bold;
+}
+/* layer style start */
+Flayer {
+	font-family: courier new, SimSun, Microsoft YaHei;
+}
+Flayer Fmask {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: .2;
+    z-index: 10000;
+}
+Flayer Fbox {
+	position: fixed;
+    z-index: 10001;
+    /*min-width: 300px;*/
+}
+Flayer Fheader {
+	padding: .5rem 0rem .5rem .5rem;
+	text-align: left;
+	border-top-left-radius: .3rem;
+	border-top-right-radius: .3rem;
+	background-color: #00CC99;
+	color: #FFF;
+}
+Flayer Fcontent {
+	background-color: #FFF;
+	overflow: auto;
+}
+Flayer Ffooter {
+	background-color: #FFF;
+	border-top: 1px solid #DDD;
+	text-align: right;
+	padding: .5rem .5rem;
+	border-bottom-right-radius: .3rem;
+	border-bottom-left-radius: .3rem;
+}
+Flayer Ffooter button {
+	padding: .5rem 1rem;
+}
+
+Flayer Fbox.tips {
+	min-width: 0px;
+	text-align: center;
+}
+Flayer Fbox.tips Fcontent {
+	padding: .5rem 1rem;
+	border-radius: .3rem;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: #FFF;
+}
+/* layer style end */
