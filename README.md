@@ -35,7 +35,9 @@ A Golang web framework
 ***
 
 下载代码后运行go build main.go在当前目录生成main可执行文件双击即可运行查看。
-当前代码是带webview版本如不如要在`main.go`中去除最后一行调用和导入包即可
+
+当前代码是带webview版本如不需要在`main.go`中去除最后一行调用和导入包即可
+
 [zserge/webview](https://github.com/zserge/webview "zserge/webview") github主页 
 ![App截图](http://oss-findoit-image.fire80.com/images/2019/10/17/17/5da837ffa707c.png 'App截图')
 
