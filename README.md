@@ -34,7 +34,26 @@ A Golang web framework
 
 ***
 
+# build & start
 下载代码后运行go build main.go在当前目录生成main可执行文件双击即可运行查看。
+```
+# Linux
+$ go build -o webview-example && ./webview-example
+
+# MacOS uses app bundles for GUI apps
+$ mkdir -p example.app/Contents/MacOS
+$ go build -o example.app/Contents/MacOS/example
+$ open example.app # Or click on the app in Finder
+
+# Windows requires special linker flags for GUI apps.
+# It's also recommended to use TDM-GCC-64 compiler for CGo.
+# http://tdm-gcc.tdragon.net/download
+$ go build -ldflags="-H windowsgui" -o webview-example.exe
+```
+
+# start
+1. 如是webview版启动后会自动打开软件页面
+2. 禁用webview只启动服务的话，打开浏览器输入http://localhost:4000查看（默认4000端口可到Bootstrap.Config中修改）
 
 当前代码是带webview版本如不需要在`main.go`中去除最后一行调用和导入包即可
 
